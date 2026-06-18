@@ -1,0 +1,15 @@
+practiced commands
+
+git init - It intialised an empty git repo in project folder
+
+git add <file_name> = added that file to local repo staging area
+
+git status - It checked unsaved changes
+
+git commit -m "message" - it saved the changes in local repo
+
+git remote add origin https://github.com/BibinSanju/Git_learn.git - added an origin in my github
+
+git branch -M main - created main branch
+
+git push origin main - pushed to local repo to github
