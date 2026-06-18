@@ -1,11 +1,22 @@
-name: Test Workflow
+name: Python Tests
 
-on: push
+on:
+  push:
+  pull_request:
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
-      - run: echo "Workflow executed successfully"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: python -m pip install pytest
+
+      - run: python -m py_compile app.py
+
+      - run: pytest
